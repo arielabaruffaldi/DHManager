@@ -1,6 +1,6 @@
-package com.company;
+package com.company.Profesor;
 
-public class Profesor {
+public abstract class Profesor {
     private String nombre;
     private String apellido;
     private Integer antiguedad;

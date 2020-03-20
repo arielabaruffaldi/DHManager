@@ -2,11 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="052f2cc1-eb62-4801-be81-83a6a74ac7e6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/company/Profesor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/Profesor/ProfesorAdjunto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/Profesor/ProfesorTitular.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Alumno.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Alumno.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Curso.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Curso.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Profesor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Profesor/Profesor.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,7 +26,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1ZPYvlohVc89wMXFggCpPo3S1hg" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
   </component>
