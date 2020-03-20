@@ -6,8 +6,11 @@ public class Main {
 	// write your code here
 
         Alumno unAlumno = new Alumno("Pepito", "Suarez", 1);
-        Alumno unAlumno2 = new Alumno("Juan", "Carlos", 1);
+        Alumno otroAlumno = new Alumno("Juan", "Carlos", 2);
 
-        System.out.println(unAlumno.equals(unAlumno2));
+        Curso unCurso = new Curso ("1B", 1);
+        Curso otroCurso = new Curso ("2B", 2);
+
+        System.out.println(unCurso.equals(otroCurso));
     }
 }
