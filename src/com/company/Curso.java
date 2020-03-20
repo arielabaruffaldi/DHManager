@@ -20,8 +20,7 @@ public class Curso {
     @Override
     public boolean equals(Object obj) {
         if(obj instanceof Curso){
-            Curso cursoAComparar = (Curso) obj;
-            return cursoAComparar.getCodigoCurso().equals(this.codigoCurso);
+            return ((Curso) obj).getCodigoCurso().equals(this.codigoCurso);
         }
         return false;
     }

@@ -11,6 +11,9 @@ public class Main {
         Curso unCurso = new Curso ("1B", 1);
         Curso otroCurso = new Curso ("2B", 2);
 
-        System.out.println(unCurso.equals(otroCurso));
+        Profesor unProfesor = new Profesor("Maria", "Apellidosky", 1, 2);
+        Profesor otroProfesor = new Profesor("Jose", "Rodo", 1, 4);
+
+        System.out.println(unProfesor.equals(otroProfesor));
     }
 }

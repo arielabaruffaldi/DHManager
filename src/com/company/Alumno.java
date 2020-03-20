@@ -26,8 +26,7 @@ public class Alumno {
     @Override
     public boolean equals(Object obj) {
         if (obj instanceof Alumno){
-            Alumno objAComparar = (Alumno) obj;
-            return objAComparar.getCodigoAlumno().equals(this.codigoAlumno);
+            return ((Alumno) obj).getCodigoAlumno().equals(this.codigoAlumno);
         }
         return false;
     }
