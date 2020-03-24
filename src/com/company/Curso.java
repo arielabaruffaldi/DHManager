@@ -14,16 +14,31 @@ public class Curso {
     private ProfesorTitular unProfesorTitular;
     private ProfesorAdjunto unProfesorAdjunto;
     private Integer cupoMaximoAlumnos;
-    private Set<Alumno> unaListaDeAlumno;
+    private Set<Alumno> unaListaDeAlumno = new HashSet<>();
 
     public Curso(String nombre, Integer codigoCurso, ProfesorTitular unProfesorTitular,
-                 ProfesorAdjunto unProfesorAdjunto, Integer cupoMaximoAlumnos, List<Alumno> unaListaDeAlumno) {
+                 ProfesorAdjunto unProfesorAdjunto, Integer cupoMaximoAlumnos) {
         this.nombre = nombre;
         this.codigoCurso = codigoCurso;
         this.unProfesorTitular = unProfesorTitular;
         this.unProfesorAdjunto = unProfesorAdjunto;
         this.cupoMaximoAlumnos = cupoMaximoAlumnos;
-        this.unaListaDeAlumno = new HashSet<>();
+    }
+
+    public Boolean agregarUnAlumno(Alumno unAlumno){
+        if(unaListaDeAlumno.size() < cupoMaximoAlumnos){
+            unaListaDeAlumno.add(unAlumno);
+            System.out.println("la cantidad de alumnos es: " + unaListaDeAlumno.size());
+            return true;
+        }
+        return false;
+    }
+
+    public void eliminarAlumno(Alumno unAlumno){
+        if(unaListaDeAlumno.size()>0){
+            unaListaDeAlumno.remove(unAlumno);
+            System.out.println(" se borro un alumno, la cantidad ahora es: " + unaListaDeAlumno.size());
+        }
     }
 
     public String getNombre() {
@@ -46,7 +61,7 @@ public class Curso {
         return cupoMaximoAlumnos;
     }
 
-    public List<Alumno> getUnaListaDeAlumno() {
+    public Set<Alumno> getUnaListaDeAlumno() {
         return unaListaDeAlumno;
     }
 

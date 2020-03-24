@@ -19,6 +19,7 @@ public class DigitalHouseManager {
         this.listaDeInscripciones = new HashSet<>();
     }
 
+
     public Set<Alumno> getListaDeAlumnos() {
         return listaDeAlumnos;
     }
