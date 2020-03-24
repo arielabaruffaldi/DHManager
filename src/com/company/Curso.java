@@ -4,7 +4,9 @@ import com.company.Profesor.ProfesorAdjunto;
 import com.company.Profesor.ProfesorTitular;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class Curso {
     private String nombre;
@@ -12,7 +14,7 @@ public class Curso {
     private ProfesorTitular unProfesorTitular;
     private ProfesorAdjunto unProfesorAdjunto;
     private Integer cupoMaximoAlumnos;
-    private List<Alumno> unaListaDeAlumno;
+    private Set<Alumno> unaListaDeAlumno;
 
     public Curso(String nombre, Integer codigoCurso, ProfesorTitular unProfesorTitular,
                  ProfesorAdjunto unProfesorAdjunto, Integer cupoMaximoAlumnos, List<Alumno> unaListaDeAlumno) {
@@ -21,7 +23,7 @@ public class Curso {
         this.unProfesorTitular = unProfesorTitular;
         this.unProfesorAdjunto = unProfesorAdjunto;
         this.cupoMaximoAlumnos = cupoMaximoAlumnos;
-        this.unaListaDeAlumno = new ArrayList<>();
+        this.unaListaDeAlumno = new HashSet<>();
     }
 
     public String getNombre() {
