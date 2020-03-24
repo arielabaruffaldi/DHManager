@@ -17,5 +17,7 @@ public class Main {
         unCurso.agregarUnAlumno(unAlumno);
         unCurso.agregarUnAlumno(otroAlumno);
         unCurso.eliminarAlumno(otroAlumno);
+
+        System.out.println(unProfesorAdjunto.equals(unProfesorTitular));
     }
 }

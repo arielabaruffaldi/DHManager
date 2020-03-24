@@ -15,4 +15,11 @@ public class ProfesorAdjunto extends Profesor{
     public void setCantidadHorasConsultas(Integer cantidadHorasConsultas) {
         this.cantidadHorasConsultas = cantidadHorasConsultas;
     }
+
+    @Override
+    public String toString() {
+        return "ProfesorAdjunto{" +
+                "cantidadHorasConsultas=" + cantidadHorasConsultas +
+                '}';
+    }
 }

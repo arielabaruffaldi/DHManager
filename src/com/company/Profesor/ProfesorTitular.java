@@ -15,4 +15,11 @@ public class ProfesorTitular extends Profesor {
     public void setEspecialidad(String especialidad) {
         this.especialidad = especialidad;
     }
+
+    @Override
+    public String toString() {
+        return "ProfesorTitular{" +
+                "especialidad='" + especialidad + '\'' +
+                '}';
+    }
 }

@@ -28,7 +28,6 @@ public class Curso {
     public Boolean agregarUnAlumno(Alumno unAlumno){
         if(unaListaDeAlumno.size() < cupoMaximoAlumnos){
             unaListaDeAlumno.add(unAlumno);
-            System.out.println("la cantidad de alumnos es: " + unaListaDeAlumno.size());
             return true;
         }
         return false;
@@ -37,7 +36,6 @@ public class Curso {
     public void eliminarAlumno(Alumno unAlumno){
         if(unaListaDeAlumno.size()>0){
             unaListaDeAlumno.remove(unAlumno);
-            System.out.println(" se borro un alumno, la cantidad ahora es: " + unaListaDeAlumno.size());
         }
     }
 
@@ -71,5 +69,17 @@ public class Curso {
             return ((Curso) obj).getCodigoCurso().equals(this.codigoCurso);
         }
         return false;
+    }
+
+    @Override
+    public String toString() {
+        return "Curso{" +
+                "nombre='" + nombre + '\'' +
+                ", codigoCurso=" + codigoCurso +
+                ", unProfesorTitular=" + unProfesorTitular +
+                ", unProfesorAdjunto=" + unProfesorAdjunto +
+                ", cupoMaximoAlumnos=" + cupoMaximoAlumnos +
+                ", unaListaDeAlumno=" + unaListaDeAlumno +
+                '}';
     }
 }
