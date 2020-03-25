@@ -16,10 +16,7 @@ public class ProfesorAdjunto extends Profesor{
         this.cantidadHorasConsultas = cantidadHorasConsultas;
     }
 
-    @Override
     public String toString() {
-        return "ProfesorAdjunto{" +
-                "cantidadHorasConsultas=" + cantidadHorasConsultas +
-                '}';
+        return this.getNombre() + this.getApellido() + this.getCodigoProfesor();
     }
 }

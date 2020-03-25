@@ -14,28 +14,26 @@ public class Curso {
     private ProfesorTitular unProfesorTitular;
     private ProfesorAdjunto unProfesorAdjunto;
     private Integer cupoMaximoAlumnos;
-    private Set<Alumno> unaListaDeAlumno = new HashSet<>();
+    private Set<Alumno> unaListaDeAlumnos;
 
-    public Curso(String nombre, Integer codigoCurso, ProfesorTitular unProfesorTitular,
-                 ProfesorAdjunto unProfesorAdjunto, Integer cupoMaximoAlumnos) {
+    public Curso(String nombre, Integer codigoCurso, Integer cupoMaximoAlumnos) {
         this.nombre = nombre;
         this.codigoCurso = codigoCurso;
-        this.unProfesorTitular = unProfesorTitular;
-        this.unProfesorAdjunto = unProfesorAdjunto;
         this.cupoMaximoAlumnos = cupoMaximoAlumnos;
+        this.unaListaDeAlumnos =  new HashSet<>();
     }
 
     public Boolean agregarUnAlumno(Alumno unAlumno){
-        if(unaListaDeAlumno.size() < cupoMaximoAlumnos){
-            unaListaDeAlumno.add(unAlumno);
+        if(unaListaDeAlumnos.size() < cupoMaximoAlumnos){
+            unaListaDeAlumnos.add(unAlumno);
             return true;
         }
         return false;
     }
 
     public void eliminarAlumno(Alumno unAlumno){
-        if(unaListaDeAlumno.size()>0){
-            unaListaDeAlumno.remove(unAlumno);
+        if(unaListaDeAlumnos.size()>0){
+            unaListaDeAlumnos.remove(unAlumno);
         }
     }
 
@@ -59,8 +57,16 @@ public class Curso {
         return cupoMaximoAlumnos;
     }
 
-    public Set<Alumno> getUnaListaDeAlumno() {
-        return unaListaDeAlumno;
+    public Set<Alumno> getUnaListaDeAlumnos() {
+        return unaListaDeAlumnos;
+    }
+
+    public void setUnProfesorTitular(ProfesorTitular unProfesorTitular) {
+        this.unProfesorTitular = unProfesorTitular;
+    }
+
+    public void setUnProfesorAdjunto(ProfesorAdjunto unProfesorAdjunto) {
+        this.unProfesorAdjunto = unProfesorAdjunto;
     }
 
     @Override
@@ -79,7 +85,7 @@ public class Curso {
                 ", unProfesorTitular=" + unProfesorTitular +
                 ", unProfesorAdjunto=" + unProfesorAdjunto +
                 ", cupoMaximoAlumnos=" + cupoMaximoAlumnos +
-                ", unaListaDeAlumno=" + unaListaDeAlumno +
+                ", unaListaDeAlumno=" + unaListaDeAlumnos +
                 '}';
     }
 }

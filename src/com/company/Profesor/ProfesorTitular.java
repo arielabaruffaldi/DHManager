@@ -16,10 +16,7 @@ public class ProfesorTitular extends Profesor {
         this.especialidad = especialidad;
     }
 
-    @Override
     public String toString() {
-        return "ProfesorTitular{" +
-                "especialidad='" + especialidad + '\'' +
-                '}';
+        return this.getNombre() + this.getApellido() + this.getCodigoProfesor();
     }
 }

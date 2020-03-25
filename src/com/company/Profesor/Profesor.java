@@ -40,14 +40,4 @@ public abstract class Profesor {
         }
         return false;
     }
-
-    @Override
-    public String toString() {
-        return "Profesor{" +
-                "nombre='" + nombre + '\'' +
-                ", apellido='" + apellido + '\'' +
-                ", antiguedad=" + antiguedad +
-                ", codigoProfesor=" + codigoProfesor +
-                '}';
-    }
 }
