@@ -67,8 +67,7 @@ public class DigitalHouseManager {
             listaDeInscripciones.add(unaInscripcion);
             cursoAInscribir.agregarUnAlumno(alumnoAInscribir);
         } else {
-            System.out.println("no se puede a: + "+ alumnoAInscribir +"inscribir porque no hay cupo");
-
+            System.out.println("no se puede inscribir porque no hay cupo al alumno " + alumnoAInscribir.getNombre());
         }
     }
 

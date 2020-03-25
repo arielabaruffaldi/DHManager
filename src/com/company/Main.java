@@ -25,9 +25,8 @@ public class Main {
         unDigitalHouseManager.inscribirAlumno(1, 20002);
         unDigitalHouseManager.inscribirAlumno(2, 20002);
         unDigitalHouseManager.bajaProfesor(2);
-        unDigitalHouseManager.bajaCurso(20001);
         unDigitalHouseManager.asignarProfesores(20002, 0, 1);
         Curso unCurso = unDigitalHouseManager.buscarCurso(20002);
-        System.out.println(unCurso.getUnaListaDeAlumnos());
+        System.out.println(unCurso);
     }
 }
