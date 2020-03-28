@@ -1,14 +1,23 @@
 package com.company;
 
+import java.util.HashSet;
+import java.util.Set;
+
 public class Alumno {
     private String nombre;
     private String apellido;
     private Integer codigoAlumno;
+    private Set <Curso> listaDeCursos;
 
     public Alumno(String nombre, String apellido, Integer codigoAlumno) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.codigoAlumno = codigoAlumno;
+        listaDeCursos = new HashSet<>();
+    }
+
+    public void agregarCursoAlAlumno(Curso unCurso){
+        listaDeCursos.add(unCurso);
     }
 
     public String getNombre() {
@@ -21,6 +30,10 @@ public class Alumno {
 
     public Integer getCodigoAlumno() {
         return codigoAlumno;
+    }
+
+    public Set<Curso> getListaDeCursos() {
+        return listaDeCursos;
     }
 
     @Override

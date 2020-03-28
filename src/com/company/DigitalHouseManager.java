@@ -38,14 +38,12 @@ public class DigitalHouseManager {
         Profesor unProfesorAdjunto = new ProfesorAdjunto(nombre, apellido, 0, codigoProfesor, cantidadDeHoras);
         listaDeProfesores.add(unProfesorAdjunto);
         //System.out.println("se dio de alta el profesor adjunto " + unProfesorAdjunto.getNombre());
-
     }
 
     public void altaProfesorTitular(String nombre, String apellido, Integer codigoProfesor, String especialidad) {
         Profesor unProfesorTitular = new ProfesorTitular(nombre, apellido, 0, codigoProfesor, especialidad);
         listaDeProfesores.add(unProfesorTitular);
         //System.out.println("se dio de alta el profesor titular " + unProfesorTitular.getNombre());
-
     }
 
     public void bajaProfesor(Integer codigoProfesor) {
@@ -61,13 +59,13 @@ public class DigitalHouseManager {
     public void inscribirAlumno(Integer codigoAlumno, Integer codigoCurso) {
         Curso cursoAInscribir = buscarCurso(codigoCurso);
         Alumno alumnoAInscribir = buscarAlumno(codigoAlumno);
-        //se fija si existe el curso, el alumno y si hay cupo suficiente
         if (cursoAInscribir != null && alumnoAInscribir != null && cursoAInscribir.agregarUnAlumno(alumnoAInscribir)) {
             Inscripcion unaInscripcion = new Inscripcion(alumnoAInscribir, cursoAInscribir);
             listaDeInscripciones.add(unaInscripcion);
             cursoAInscribir.agregarUnAlumno(alumnoAInscribir);
+            alumnoAInscribir.agregarCursoAlAlumno(cursoAInscribir);
         } else {
-            System.out.println("no se puede inscribir porque no hay cupo al alumno " + alumnoAInscribir.getNombre());
+            System.out.println("no se puede inscribir al alumno: " + alumnoAInscribir.getNombre() + " porque no hay cupo ");
         }
     }
 
