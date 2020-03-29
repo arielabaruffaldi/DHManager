@@ -26,7 +26,11 @@ public class Main {
         unDigitalHouseManager.bajaProfesor(2);
         Alumno unAlumno = unDigitalHouseManager.buscarAlumno(0);
         System.out.println(unAlumno.getListaDeCursos());
-        Alumno unAlumno2 = new Alumno("pepe", "mujica ", 2010);
+
+        //PARTE K: para poder acceder a los cursos de un alumno le agregué el atributo listaDeCursos a la clase Alumno
+        // y el método agregarCursoAlAlumno que se ejecuta en el método inscribirAlumno() de DigitalHouseManager,
+        // entonces cada vez que se inscribe a un alumno, este agrega un nuevo elemento al conjunto listaDeCursos.
+
         System.out.println(unDigitalHouseManager.buscarAlumno(2010));
     }
 }
